@@ -1,16 +1,16 @@
 import React from "react";
 
 const Number: React.FC<{ number: number }> = ({ number }) => (
-  <span className="text-4xl">{number}</span>
+  <span className="text-3xl">{number}</span>
 );
 
 const Symbol: React.FC<{ text: string }> = ({ text }) => (
-  <span className="text-3xl font-semibold text-gray-900">{text}</span>
+  <span className="text-2xl font-semibold text-gray-900">{text}</span>
 );
 
 const Result: React.FC = () => (
   <span
-    className="text-3xl font-semibold text-gray-900"
+    className="text-2xl font-semibold text-gray-900"
     style={{ visibility: "hidden" }}
   >
     {0}
