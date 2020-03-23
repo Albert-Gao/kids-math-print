@@ -10,23 +10,30 @@ const Symbol: React.FC<{ text: string }> = ({ text }) => (
 
 const Result: React.FC = () => (
   <span
-    className="text-2xl font-semibold text-gray-900"
+    className="font-semibold text-gray-900 text-1xl"
     style={{ visibility: "hidden" }}
   >
     {0}
   </span>
 );
 
-export const Quiz: React.FC<{ numbers: number[] }> = ({ numbers }) => {
+export const Quiz: React.FC<{ numbers: number[]; symbol: string }> = ({
+  numbers,
+  symbol
+}) => {
   const [num1, num2] = numbers;
 
   return (
     <div
       className="flex items-center"
-      style={{ letterSpacing: "5px", minWidth: "12em", maxWidth: "12em" }}
+      style={{
+        letterSpacing: "3px",
+        minWidth: "10em",
+        maxWidth: "10em"
+      }}
     >
       <Number number={num1} />
-      <Symbol text="+" />
+      <Symbol text={symbol} />
       <Number number={num2} />
       <Symbol text="=" />
       <Result />
