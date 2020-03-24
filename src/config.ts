@@ -1,8 +1,8 @@
 export const CONFIG = {
   OVERALL: {
     QUANTITY: 300,
-    ADDITION_RATIO: 0.5,
-    SUBTRACTION_RATIO: 0.5
+    ADDITION_RATIO: 0.2,
+    SUBTRACTION_RATIO: 0.8
   },
   ADDITION: {
     MAX_LIMIT_OF_RESULT: 20,
@@ -10,9 +10,9 @@ export const CONFIG = {
     MAX_NUM: 10
   },
   SUBTRACTION: {
-    MIN_LIMIT_OF_RESULT: 1,
+    MIN_LIMIT_OF_RESULT: 0,
     MAX_LIMIT_OF_RESULT: 20,
     MIN_NUM: 1,
-    MAX_NUM: 20
+    MAX_NUM: 12
   }
 } as const;
