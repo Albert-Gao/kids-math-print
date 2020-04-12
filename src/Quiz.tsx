@@ -1,7 +1,7 @@
 import React from "react";
 
 const Number: React.FC<{ number: number }> = ({ number }) => (
-  <span className="text-3xl">{number}</span>
+  <span className="text-2xl">{number}</span>
 );
 
 const Symbol: React.FC<{ text: string }> = ({ text }) => (
@@ -19,7 +19,7 @@ const Result: React.FC = () => (
 
 export const Quiz: React.FC<{ numbers: number[]; symbol: string }> = ({
   numbers,
-  symbol
+  symbol,
 }) => {
   const [num1, num2] = numbers;
 
@@ -27,9 +27,9 @@ export const Quiz: React.FC<{ numbers: number[]; symbol: string }> = ({
     <div
       className="flex items-center"
       style={{
-        letterSpacing: "3px",
+        // letterSpacing: ".3px",
         minWidth: "10em",
-        maxWidth: "10em"
+        maxWidth: "10em",
       }}
     >
       <Number number={num1} />

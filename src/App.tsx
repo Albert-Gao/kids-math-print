@@ -17,7 +17,7 @@ function App() {
     <>
       <div
         className="flex flex-wrap items-center justify-center"
-        style={{ lineHeight: 2.05 }}
+        style={{ lineHeight: 2.3 }}
       >
         <Header number={quiz.length} />
         {quiz.map((q, i) => (
