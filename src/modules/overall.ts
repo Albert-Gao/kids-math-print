@@ -13,5 +13,16 @@ export const generateQuiz = () => {
   const adds = generateAdditions(numOfAddToBeGen);
   const subtractions = generateSubtractions(numOfSubToBeGen);
   console.log(subtractions);
-  return [...adds, ...subtractions];
+
+  const result = [...adds, ...subtractions];
+
+  if (result.length > QUANTITY) {
+    const toSubtract = result.length - QUANTITY;
+
+    for (let i = 1; i <= toSubtract; i += 1) {
+      result.pop();
+    }
+  }
+
+  return result;
 };
