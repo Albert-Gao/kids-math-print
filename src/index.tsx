@@ -1,6 +1,5 @@
-import React from "react";
 import ReactDOM from "react-dom";
-import "./styles.css";
+import "./tailwind.css";
 import "./custom.css";
 import App from "./App";
 

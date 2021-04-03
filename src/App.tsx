@@ -1,30 +1,24 @@
-import React from "react";
-import { Quiz } from "./Quiz";
-import { generateQuiz } from "./modules/overall";
-import { shuffle } from "./modules/utils";
+import { useState } from "react";
+import { QuizSection } from "./components/QuizSection";
+import Modal from "react-modal";
+import { SettingsModal } from "./components/SettingsModal";
 
-const Header: React.FC<{ number: number }> = ({ number }) => (
-  <div className="pr-6 text-2xl">
-    <span className="text-gray-800">[{number}</span>
-    <span> Quiz]</span>
-  </div>
-);
+Modal.setAppElement("#root");
 
 function App() {
-  const quiz = shuffle(generateQuiz());
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <>
-      <div
-        className="flex flex-wrap items-center justify-center"
-        style={{ lineHeight: 2.3 }}
-      >
-        <Header number={quiz.length} />
-        {quiz.map((q, i) => (
-          <Quiz numbers={[q[0], q[2]]} symbol={q[1]} key={i} />
-        ))}
-      </div>
-    </>
+    <div
+      className="flex flex-wrap items-center justify-center"
+      style={{ lineHeight: 1.7 }}
+    >
+      <QuizSection setIsModalOpen={setIsModalOpen} />
+      <SettingsModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
+    </div>
   );
 }
 

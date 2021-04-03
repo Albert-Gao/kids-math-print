@@ -1,5 +1,3 @@
-import React from "react";
-
 const Number: React.FC<{ number: number }> = ({ number }) => (
   <span className="text-2xl">{number}</span>
 );
@@ -30,6 +28,7 @@ export const Quiz: React.FC<{ numbers: number[]; symbol: string }> = ({
         // letterSpacing: ".3px",
         minWidth: "10em",
         maxWidth: "10em",
+        marginTop: "15px",
       }}
     >
       <Number number={num1} />
