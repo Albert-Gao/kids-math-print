@@ -7,7 +7,7 @@ export const AdditionSection: React.FC = () => {
       <div className="sm:col-span-2">
         <Field
           label="Max limit of result"
-          id="max-limit"
+          id="additionMaxLimit"
           type="number"
           defaultValue={9999}
         />
@@ -16,7 +16,7 @@ export const AdditionSection: React.FC = () => {
       <div className="sm:col-span-2">
         <Field
           label="Minimum number"
-          id="min-num"
+          id="additionMinNum"
           type="number"
           defaultValue={99}
         />
@@ -25,7 +25,7 @@ export const AdditionSection: React.FC = () => {
       <div className="sm:col-span-2">
         <Field
           label="Maximum number"
-          id="max-num"
+          id="additionMaxNum"
           type="number"
           defaultValue={999}
         />

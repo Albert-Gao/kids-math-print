@@ -8,13 +8,13 @@ export const GeneralSection: React.FC = () => {
       description="general settings which apply to all sections below"
     >
       <div className="sm:col-span-2">
-        <Field label="Quantity" id="quantity" type="number" />
+        <Field label="Quantity" id="generalQuantity" type="number" />
       </div>
 
       <div className="sm:col-span-2">
         <Field
           label="Addition Ratio"
-          id="addition-ratio"
+          id="generalAdditionRatio"
           type="number"
           defaultValue={0.6}
         />
@@ -23,7 +23,7 @@ export const GeneralSection: React.FC = () => {
       <div className="sm:col-span-2">
         <Field
           label="Subtraction Ratio"
-          id="subtraction-ratio"
+          id="generalSubtractionRatio"
           type="number"
           defaultValue={0.4}
         />
