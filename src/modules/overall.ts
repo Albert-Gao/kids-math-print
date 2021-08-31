@@ -1,12 +1,14 @@
-import { CONFIG } from "../config";
+import { Config } from "../components/Settings/sections/utils/Config";
 import { generateAdditions } from "./addition";
 import { generateSubtractions } from "./subtraction";
 
-const { QUANTITY, ADDITION_RATIO, SUBTRACTION_RATIO } = CONFIG.OVERALL;
-
 export const generateQuiz = () => {
-  const numOfAddToBeGen = Math.ceil(QUANTITY * ADDITION_RATIO);
-  const numOfSubToBeGen = Math.ceil(QUANTITY * SUBTRACTION_RATIO);
+  const config = new Config();
+
+  const { quantity, additionRatio, subtractionRatio } = config.overall;
+
+  const numOfAddToBeGen = Math.ceil(quantity * additionRatio);
+  const numOfSubToBeGen = Math.ceil(quantity * subtractionRatio);
   console.log("numOfAddToBeGen", numOfAddToBeGen);
   console.log("numOfSubToBeGen", numOfSubToBeGen);
 
@@ -16,8 +18,8 @@ export const generateQuiz = () => {
 
   const result = [...adds, ...subtractions];
 
-  if (result.length > QUANTITY) {
-    const toSubtract = result.length - QUANTITY;
+  if (result.length > quantity) {
+    const toSubtract = result.length - quantity;
 
     for (let i = 1; i <= toSubtract; i += 1) {
       result.pop();

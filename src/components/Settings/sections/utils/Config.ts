@@ -41,7 +41,7 @@ export class Config {
     minLimitOfResult: 0,
     maxLimitOfResult: 9999,
     minNum: 1,
-    maxNum: 20,
+    maxNum: 99,
   };
 
   constructor() {

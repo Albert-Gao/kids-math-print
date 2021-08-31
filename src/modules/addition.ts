@@ -1,14 +1,14 @@
-import { CONFIG } from "../config";
+import { Config } from "../components/Settings/sections/utils/Config";
 import { baseAlgorithm } from "./utils";
 
-const { MIN_NUM, MAX_NUM, MAX_LIMIT_OF_RESULT } = CONFIG.ADDITION;
-
 export const generateAdditions = (quantity: number) => {
+  const addition = new Config().addition;
+
   return baseAlgorithm({
     symbol: "+",
-    isValidCombination: (a, b) => a + b <= MAX_LIMIT_OF_RESULT,
+    isValidCombination: (a, b) => a + b <= addition.maxLimitOfResult,
     quantity: quantity,
-    minNum: MIN_NUM,
-    maxNum: MAX_NUM
+    minNum: addition.minNum,
+    maxNum: addition.maxNum,
   });
 };

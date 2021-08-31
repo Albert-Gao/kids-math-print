@@ -1,20 +1,17 @@
-import { CONFIG } from "../config";
+import { Config } from "../components/Settings/sections/utils/Config";
 import { baseAlgorithm } from "./utils";
 
-const {
-  MIN_NUM,
-  MAX_NUM,
-  MIN_LIMIT_OF_RESULT,
-  MAX_LIMIT_OF_RESULT
-} = CONFIG.SUBTRACTION;
-
 export const generateSubtractions = (quantity: number) => {
+  const subtraction = new Config().subtraction;
+
   return baseAlgorithm({
     symbol: "-",
     isValidCombination: (a, b) =>
-      a > b && a - b >= MIN_LIMIT_OF_RESULT && a - b <= MAX_LIMIT_OF_RESULT,
+      a > b &&
+      a - b >= subtraction.minLimitOfResult &&
+      a - b <= subtraction.maxLimitOfResult,
     quantity: quantity,
-    minNum: MIN_NUM,
-    maxNum: MAX_NUM
+    minNum: subtraction.minNum,
+    maxNum: subtraction.maxNum,
   });
 };
