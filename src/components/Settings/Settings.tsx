@@ -79,6 +79,7 @@ export const Settings: React.FC<{ closeModal: () => void }> = ({
             );
 
             closeModal();
+            window.location.reload();
           })}
           closeModal={closeModal}
         />
